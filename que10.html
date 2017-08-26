@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <script>
+            function armstr()
+            {
+                var arm=0,a,b,c,d,num;
+                num=Number(document.getElementById("no_input").value);
+
+                temp=num;
+                while(temp>0)
+                {
+                    a=temp%10;
+                    temp=parseInt(temp/10); // convert float into Integer
+                    arm=arm+a*a*a;
+                }
+                if(arm==num)
+                {
+                    alert("is an armstrong number");
+                }
+                else
+                {
+                    alert("Not an armstrong number");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. </p>
+        Enter any Number: <input id="no_input">
+        <button onclick="armstr()" style="background-color:green">Check</button></br></br>
+    </body>
+</html>
